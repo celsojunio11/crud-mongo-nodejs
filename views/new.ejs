@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <form action="<%= action %>" method="POST">
+    <label>Nome Empresa:</label>
+    <input type="text" name="nome" value="<%= dadosempresa.nome%>"/>
+    <label>Número</label>
+    <input type="number" name="numero" value="<%= dadosempresa.numero%>"/>
+    <button type="submit" name="Salvar">Salvar</button>
+
+  </form>
+</body>
+
+</html>
