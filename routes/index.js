@@ -60,5 +60,16 @@ router.post('/edit/:id', function(req, res){
   })
 })
 
+/* ROTA EXCLUIR EMPRESA*/
+router.get('/delete/:id', function(req, res){
+  var id = req.params.id;
+  global.db.excluirEmpresa(id, (error) => { 
+    if (error){
+      return console.log(error);
+    }res.redirect('/');
+  })
+
+})
+
 
 module.exports = router;

@@ -12,6 +12,9 @@
           <a href="/edit/<%= lista._id%>">
             <%= lista.nome %>
           </a>
+          <a href="/delete/<%= lista._id%>" onclick="return confirm('Deseja realmente excluir?');">
+            Excluir
+          </a>
         </li>
       <% }) %>    
       <hr>

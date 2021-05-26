@@ -29,5 +29,8 @@ function atualizarEmpresa(id, docEmpresa, callback) {
             }, callback);
 }
 
+function excluirEmpresa(id, callback){
+    global.conn.collection("dadosempresa").deleteOne({_id: new idEmpresa(id)}, callback);
+}
 
-module.exports = { listarEmpresas, inserirEmpresa, buscarPorId, atualizarEmpresa };
+module.exports = { listarEmpresas, inserirEmpresa, buscarPorId, atualizarEmpresa, excluirEmpresa };
